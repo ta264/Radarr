@@ -216,7 +216,6 @@ namespace NzbDrone.Core.Download
             try
             {
                 var request = new HttpRequest(torrentUrl);
-                request.Headers.Accept = "application/x-bittorrent";
                 request.AllowAutoRedirect = false;
 
                 var response = _httpClient.Get(request);
